@@ -1,6 +1,6 @@
 # Black Hole Stability and Temperature
 
-This note gives a simple way to think about black hole stability using energy, mass, and Hawking temperature.
+This note gives a simple way to think about black hole stability as a function of the size of a Blackhole and why this is related to the mass, temperature and total energy in the blackhole, so cannot be easily decreased without putting more energy into the system. 
 
 ## Core equations
 
