@@ -1,210 +1,71 @@
- 
+# Black Hole Stability and Temperature
 
-A “computational pump” for black‑hole information
-In this picture, a black hole is treated as a quantum‑information reservoir whose physics is governed by three key equations:
+This note gives a simple way to think about black hole stability using energy, mass, and Hawking temperature.
 
-Hawking temperature:
+## Core equations
 
-T
-H
-∝
-1
-M
-T 
-H
-​
- ∝ 
-M
-1
-​
- 
-so large holes are cold, small ones are hot.
+For a non-rotating black hole:
 
-Mass‑loss / energy‑release rate:
+\[
+E = Mc^2
+\]
 
-d
-M
-d
-t
-∼
-P
-∼
-A
- 
-T
-H
-4
-∝
-1
-M
-2
-dt
-dM
-​
- ∼P∼AT 
-H
-4
-​
- ∝ 
-M 
-2
- 
-1
-​
- 
-where 
-A
-∝
-M
-2
-A∝M 
-2
-  is the horizon area; mass and entropy decrease as the hole evaporates.
+\[
+T_H = \frac{\hbar c^3}{8\pi G M k_B}
+\]
 
-Bekenstein–Hawking entropy:
+\[
+\frac{dM}{dt} \propto -\frac{1}{M^2}
+\]
 
-S
-BH
-∝
-A
-∝
-M
-2
-S 
-BH
-​
- ∝A∝M 
-2
- 
-and the first law of black‑hole thermodynamics is
+These show that as mass \(M\) increases, Hawking temperature \(T_H\) decreases, and evaporation slows down.
 
-d
-M
-=
-T
-H
- 
-d
-S
-BH
-dM=T 
-H
-​
- dS 
-BH
-​
- 
-so temperature is the “cost per unit entropy” you pay when adding or removing mass.
+## Simple stability idea
 
-The horizon starts out with high entropy because it encodes the quantum state of the infalling matter in a highly scrambled, mixed‑state form. The generalized second law requires
+A very simple stability proxy is:
 
-d
-(
-S
-ext
-+
-S
-BH
-)
-≥
-0
-,
-d(S 
-ext
-​
- +S 
-BH
-​
- )≥0,
-so you can’t lower horizon entropy for free; any reduction must be compensated by entropy increase in the outside.
+\[
+S \propto \frac{1}{T_H}
+\]
 
-Now imagine a Dyson‑sphere‑scale quantum computer surrounding the black hole at some outer radius. This structure:
+Since \(T_H \propto 1/M\), this is also:
 
-Collects Hawking radiation and horizon‑crossing data,
+\[
+S \propto M
+\]
 
-Stores the full history of emitted quanta and their correlations in a quantum memory,
+So, in this simplified picture, larger black holes are more stable against evaporation.
 
-Runs a quantum algorithm that inverts the scrambling, reconstructing the pure state of the infalling matter from the radiation.
+## Fixed-temperature case
 
-Mathematically, this is analogous to canonical purification or information‑recovery protocols in quantum gravity: the horizon’s mixed state
+For a Schwarzschild black hole, temperature and mass are linked:
 
-ρ
-horizon
-ρ 
-horizon
-​
- 
-is “upgraded” to a pure state
+\[
+T_H \propto \frac{1}{M}
+\]
 
-∣
-ψ
-inf
-⟩
-∣ψ 
-inf
-​
- ⟩
-held in the exterior computer’s Hilbert space, so the effective entropy associated with the horizon drops even though the total entropy is conserved or increases in the environment.
+So if temperature is held fixed, mass is fixed too. That means you cannot change the intrinsic stability of an isolated Schwarzschild black hole without changing the setup.
 
-Thus the Dyson‑sphere computer acts as a computational pump:
+## Heat capacity
 
-It does not change 
-d
-M
-/
-d
-t
-dM/dt directly, but it reorganizes the information flow captured by 
-d
-M
-=
-T
-H
-d
-S
-BH
-dM=T 
-H
-​
- dS 
-BH
-​
- .
+Black holes can have negative heat capacity:
 
-It effectively “pumps” information out of the horizon and into a purified, structured form in the exterior, exploiting the fact that information is encoded in the Hawking correlations once the hole has emitted enough (roughly past the Page time).
+\[
+C = \frac{dE}{dT}
+\]
 
-The computational pump is not a magical energy‑instantiator; it is a quantum‑informational device that reshapes how entropy and information are distributed between the horizon and the outside, while still obeying the black‑hole evolution defined by 
-T
-H
-∝
-1
-/
-M
-T 
-H
-​
- ∝1/M, 
-S
-BH
-∝
-M
-2
-S 
-BH
-​
- ∝M 
-2
- , and 
-d
-M
-/
-d
-t
-∝
-1
-/
-M
-2
-dM/dt∝1/M 
-2
- .
+For a Schwarzschild black hole, this is negative, which means the black hole gets hotter as it loses energy. That is one reason black hole thermodynamics behaves differently from ordinary systems.
+
+## One-line summary
+
+A simple model is:
+
+\[
+S = \frac{1}{T_H} = \frac{8\pi G M k_B}{\hbar c^3}
+\]
+
+In this toy model, lower temperature means higher stability.
+
+## Note
+
+This is a simplified thermodynamic picture, not a full general-relativistic stability proof.
